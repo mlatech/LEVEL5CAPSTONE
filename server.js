@@ -3,13 +3,13 @@ const app = express()
 const morgan = require("morgan")
 const mongoose = require("mongoose")
 
-middleware
+//middleware
 app.use(express.json())
 app.use(morgan("dev"))
 
 //routes
 app.use("/plants", require("./routes/plantRouter.js"))
-app.use("/general", require("./routes/generalRouter.js"))
+
 
 //connect to database
 mongoose.connect('mongodb://localhost:27017/plantsdb',{useNewUrlParser: true})

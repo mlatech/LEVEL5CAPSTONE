@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2px;
+    background-color: #f2f2f2;
+    margin-top: 1px;
+  }
+  
+  .navbar-image {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  
+  .navbar-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    z-index: 1;
+  }
+  
+  .info-content {
+    background-color: white;
+    padding: 2rem;
+  }
+  
+  .info-text {
+    color: black;
+    padding: 0 150px;
+    font-weight: 300; /* Set font weight to 300 (thin) */
+    color: rgb(105, 105, 105);
+  }
+  .text-container{
+    margin-top: 400px;
+  }
