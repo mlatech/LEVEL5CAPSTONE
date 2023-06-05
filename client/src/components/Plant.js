@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PlantContext } from "../PlantContext";
-import "./Plant.css"; // Import the CSS file for custom styles
+import "./Plant.css"; 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 export default function Plant(props) {
   const { handleFilter, getPlants, plants } = useContext(PlantContext);
@@ -26,6 +27,7 @@ export default function Plant(props) {
       <button onClick={navigateToHomePage} className="button">
         Take Me To The Home Page
       </button>
+      <h2>I want more{<Link to ="/info" style={{padding: 50}} className= "info-link">Information</Link>}</h2>
       {showPlants && (
         <div className="plant-list">
           {plants.length > 0 ? (

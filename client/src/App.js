@@ -9,8 +9,8 @@ export default function App(){
   return(
     <Router>
       <div>
-        <Link to ="/plant" style={{padding: 50}}>Plants</Link>
-        <Link to ="/info" style={{padding: 50}}>Information</Link>
+        {/* <Link to ="/plant" style={{padding: 50}}>Plants</Link>
+        <Link to ="/info" style={{padding: 50}}>Information</Link> */}
        
       </div>
       <Routes>
