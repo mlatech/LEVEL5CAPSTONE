@@ -15,7 +15,7 @@ export default function Info() {
             className="navbar-image"
           />
         </Link>
-        {/* Other navigation items */}
+       
         <h1 className="navbar-title">Gardening Tips and Tricks</h1>
       </nav>
       <div className="text-container">
@@ -37,6 +37,9 @@ export default function Info() {
         <h1>Dont Forget the Sunlight</h1>
         <h3>Just like plants in the ground, plants in containers need sunlight in order to thrive. Unlike plants in the ground, it’s easier to address those sunlight needs because potted plants are portable. If your plants aren’t getting adequate light, just move them to an area that offers them the sun they need.</h3>
       </div>
+      <footer className="footer">
+        <p className="footer-text">&copy; 2023 Tom Pepper's General Store. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

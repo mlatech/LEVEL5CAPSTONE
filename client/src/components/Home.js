@@ -1,51 +1,55 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { UserContext } from "../UserProvider";
+import "./Home.css";
 
-export default function Home() {
+export default function Home(props) {
   const navigate = useNavigate();
+  const { user: { username } } = useContext(UserContext);
+
+  const handleExploreInventory = () => {
+    navigate("/plants");
+  };
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h1 style={{ fontSize: "36px", marginBottom: "1.5rem" }}>
-        Welcome to Tom Pepper's General Store!
-      </h1>
-      <p style={{ fontSize: "18px", marginBottom: "2rem" }}>
-        We are your one-stop shop for all your gardening needs. Whether you're
-        a seasoned gardener or just getting started, our store offers a wide
-        range of high-quality plants, seeds, and gardening supplies to help you
-        create a vibrant and thriving garden.
-      </p>
-      <button
-        onClick={() => navigate("./plant")}
-        style={{
-          padding: "0.75rem 1.5rem",
-          fontSize: "18px",
-          border: "none",
-          backgroundColor: "#3498db",
-          color: "#fff",
-          cursor: "pointer",
-        }}
-      >
-        Explore Our Inventory
-      </button>
-      <div style={{ marginTop: "2rem" }}>
-        <h2 style={{ fontSize: "24px", marginBottom: "1rem" }}>
-          Important Announcements
-        </h2>
-        <ul style={{ listStyleType: "none", padding: "0", margin: "0" }}>
-          <li>
-            <h3 style={{ fontSize: "18px", marginBottom: "0.5rem" }}>
-              Tom Peppers will soon begin taking orders for chicks
-            </h3>
+    <div className="home-container">
+      <header className="header">
+        <h1 className="logo">Tom Pepper's General Store</h1>
+        <nav className="navigation">
+  
+      <Link to="/plants">Plants</Link>
+      <Link to="/info">Info</Link>
+          <button onClick={props.logout}>Logout</button>
+        </nav>
+      </header>
+
+      <section className="hero">
+        <div className="hero-content">
+          <h1 className="hero-title">{username ? `Hello, ${username}!` : null} Welcome to Tom Pepper's General Store</h1>
+          
+          <p className="hero-description">
+            We are your one-stop shop for all your gardening needs. Whether you're a seasoned gardener or just getting started, our store offers a wide range of high-quality plants, seeds, and gardening supplies to help you create a vibrant and thriving garden.
+          </p>
+          {/* <button className="explore-button" onClick={handleExploreInventory}>
+            Explore Our Inventory
+          </button> */}
+        </div>
+      </section>
+
+      <section className="announcements">
+        <h2 className="announcements-title">Important Announcements</h2>
+        <ul className="announcements-list">
+          <li className="announcement">
+            <h3 className="announcement-text">Tom Peppers will soon begin taking orders for chicks</h3>
           </li>
-          <li>
-            <h3 style={{ fontSize: "18px", marginBottom: "0.5rem" }}>
-              Now taking orders for our heritage breed Turkeys
-            </h3>
+          <li className="announcement">
+            <h3 className="announcement-text">Now taking orders for our heritage breed Turkeys</h3>
           </li>
         </ul>
-      </div>
+      </section>
+
     </div>
   );
 }
+
 

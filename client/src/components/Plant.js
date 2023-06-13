@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { PlantContext } from "../PlantContext";
-import "./Plant.css"; 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { useNavigate, Link } from "react-router-dom";
+import { UserContext } from "../UserProvider";
+import "./Plant.css";
 
-export default function Plant(props) {
-  const { handleFilter, getPlants, plants } = useContext(PlantContext);
+export default function Plant() {
+  const { handleFilter, getPlants, plants } = useContext(UserContext);
   const navigate = useNavigate();
   const [showPlants, setShowPlants] = useState(false);
 
@@ -14,20 +13,18 @@ export default function Plant(props) {
     setShowPlants(true);
   };
 
-  const navigateToHomePage = () => {
-    navigate("/");
-  };
+
 
   return (
     <div className="container">
-      <h1 className="title">Welcome to Our Farm</h1>
+      <h1 className="title">Check Out Our Current Inventory</h1>
       <button onClick={handleClick} className="inventory-button">
         See Plant Inventory
       </button>
-      <button onClick={navigateToHomePage} className="button">
-        Take Me To The Home Page
-      </button>
-      <h2>I want more{<Link to ="/info" style={{padding: 50}} className= "info-link">Information</Link>}</h2>
+     
+      <h2>
+        I want more<Link to="/info" style={{ padding: 50 }} className="info-link">Information</Link>
+      </h2>
       {showPlants && (
         <div className="plant-list">
           {plants.length > 0 ? (
@@ -36,11 +33,7 @@ export default function Plant(props) {
                 <h2 className="plant-name">{plant.name}</h2>
                 {plant.image && (
                   <a href={plant.image} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={plant.image}
-                      alt={plant.name}
-                      className="plant-image"
-                    />
+                    <img src={plant.image} alt={plant.name} className="plant-image" />
                   </a>
                 )}
               </div>
@@ -57,6 +50,9 @@ export default function Plant(props) {
         <option value="Pepper">Peppers</option>
         <option value="Herbs">Herbs</option>
       </select>
+      <footer className="footer">
+        <p className="footer-text">&copy; 2023 Tom Pepper's General Store. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

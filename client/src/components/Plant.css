@@ -1,78 +1,85 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .inventory-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .button {
-    background-color: #f44336;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .plant-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .plant-card {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  .plant-name {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .plant-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  .no-plants {
-    font-size: 16px;
-    color: #999;
-  }
-  
-  .filter-title {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-  
-  .filter-form {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-top: 10px;
-  }
-  
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+}
+
+.inventory-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 18px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.info-link {
+  padding: 50px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.plant-card {
+  width: 300px;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plant-name {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.plant-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.no-plants {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.filter-title {
+  font-size: 24px;
+  margin-top: 2rem;
+  color: #007bff;
+}
+
+.filter-form {
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+
   
