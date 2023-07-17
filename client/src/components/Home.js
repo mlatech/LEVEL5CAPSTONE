@@ -1,55 +1,50 @@
-import React, { useContext } from "react";
+import  React, { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../UserProvider";
 import "./Home.css";
+import Navbar from "./NavBar";
+
 
 export default function Home(props) {
   const navigate = useNavigate();
-  const { user: { username } } = useContext(UserContext);
-
-  const handleExploreInventory = () => {
-    navigate("/plants");
-  };
 
   return (
-    <div className="home-container">
-      <header className="header">
-        <h1 className="logo">Tom Pepper's General Store</h1>
-        <nav className="navigation">
   
-      <Link to="/plants">Plants</Link>
-      <Link to="/info">Info</Link>
-          <button onClick={props.logout}>Logout</button>
-        </nav>
-      </header>
-
+    <div className="home-container">
+      <Navbar />
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">{username ? `Hello, ${username}!` : null} Welcome to Tom Pepper's General Store</h1>
-          
-          <p className="hero-description">
-            We are your one-stop shop for all your gardening needs. Whether you're a seasoned gardener or just getting started, our store offers a wide range of high-quality plants, seeds, and gardening supplies to help you create a vibrant and thriving garden.
-          </p>
-          {/* <button className="explore-button" onClick={handleExploreInventory}>
-            Explore Our Inventory
-          </button> */}
+       
         </div>
       </section>
+      <section className="about-us-section">
+        <h1 className="about-us-title">About us</h1>
+        <p className="about-us-content">Welcome to Tom Pepper's General Store! We take pride in being a trusted destination for all your gardening needs. We are a family farm and seasonal greenhouse offering heirloom and hybrid veriety seedlings. With a passion for nurturing green spaces, we strive to provide our customers with exceptional products and expert guidance. Feel free to browse our site, or if your in the area...come visit us during our working hours! </p>
+        <p>~~~Happy Gardening!!~~~</p>
 
+       
+        <h1 className="about-us-title">Seasonal Business Hours</h1>
+        <h4 className="about-us-content">Monday - Friday    8am-8pm</h4>
+        <h4 className="about-us-content">Saturday - Sunday    8am-8pm</h4>
+      
+      </section>
       <section className="announcements">
         <h2 className="announcements-title">Important Announcements</h2>
         <ul className="announcements-list">
           <li className="announcement">
-            <h3 className="announcement-text">Tom Peppers will soon begin taking orders for chicks</h3>
+            <h3 className="announcement-text">Zoom classes coming soon: "How To Preserve Your Harvest"</h3>
           </li>
           <li className="announcement">
             <h3 className="announcement-text">Now taking orders for our heritage breed Turkeys</h3>
           </li>
         </ul>
       </section>
+      <footer className="footer">
+  <p className="footer-text">
+    &copy; 2023 <a href="https://karynasportfolio.netlify.app/" className="portfolio-link">MLA Technologies</a>. All rights reserved.
+  </p>
+</footer>
 
     </div>
   );
 }
-
-

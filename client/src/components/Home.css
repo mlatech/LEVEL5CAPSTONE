@@ -1,21 +1,12 @@
-/* Home.css */
-
 .home-container {
   font-family: Arial, sans-serif;
 }
 
-.header {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.logo {
+
+.portfolio-link {
   color: #fff;
-  font-size: 24px;
-  margin: 0;
+  text-decoration: none;
 }
 
 .navigation a {
@@ -25,38 +16,31 @@
 }
 
 .hero {
-  background-image: url('/Users/karynachernyak/vschool/development/LEVEL-5/LEVEL5CAPSTONE/client/src/components/farmpicture.avif');
-  background-size: cover;
+  background-image: url("/Users/karynachernyak/vschool/development/LEVEL-5/LEVEL5CAPSTONE/client/src/images/homepagepic.jpg"); 
+  background-repeat: no-repeat;
   background-position: center;
-  height: 600px;
+  background-size: cover;
+  height: 150px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
+
+
 
 .hero-content {
   text-align: center;
   color: #fff;
-  margin-top: 150px;
 }
 
 .hero-title {
   font-size: 36px;
   margin: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: white;
 }
 
-.hero-subtitle {
-  font-size: 24px;
-  margin: 0;
-  margin-bottom: 2rem;
-}
 
-.hero-description {
-  font-size: 18px;
-  margin: 0;
-  /* margin-bottom: .5rem; */
-}
 
 .explore-button {
   padding: 12px 24px;
@@ -68,15 +52,21 @@
 }
 
 .announcements {
-  background-color: #f8f8f8;
-  padding: 2rem 0;
+  background-image: url("/Users/karynachernyak/vschool/development/LEVEL-5/LEVEL5CAPSTONE/client/src/images/jonathan-kemper-4z3lnwEvZQw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
   text-align: center;
+  font-family: Roboto, sans-serif;
 }
 
 .announcements-title {
   font-size: 24px;
   margin: 0;
   margin-bottom: 1rem;
+  color: whitesmoke;
 }
 
 .announcements-list {
@@ -92,13 +82,36 @@
 .announcement-text {
   font-size: 18px;
   margin: 0;
+  color: whitesmoke;
 }
+
+.about-us-section{
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family: Roboto, sans-serif;
+ 
+}
+.about-us-title {
+  color: #333333;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-top: 3px; /* Adjust the value as needed */
+}
+
+.about-us-content {
+  color: #333333;
+  font-size: 16px;
+}
+
 
 .footer {
   background-color: #333;
   padding: 10px;
   text-align: center;
   color: #fff;
+left: 0;
+bottom: 0;
+width: 100%;
 }
 
-  

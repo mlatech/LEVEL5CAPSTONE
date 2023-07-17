@@ -16,9 +16,9 @@ mongoose.connect('mongodb://localhost:27017/plantsdb',{useNewUrlParser: true})
 .catch(err => console.error(err));
 
 //routes
-app.use('/auth', require('./routes/authRouter.js'))  // route used to generate a token
-app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })); // check for token
-app.use("/api/plants", require("./routes/plantRouter.js")) // authentication based off that token, which gives access to specific routes
+// app.use('/auth', require('./routes/authRouter.js'))  // route used to generate a token
+// app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })); // check for token
+app.use("/plants", require("./routes/plantRouter.js")) // authentication based off that token, which gives access to specific routes
 
 
 //error handling 

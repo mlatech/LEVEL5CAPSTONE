@@ -9,38 +9,23 @@ import ProtectedRoute from './components/ProtectedRoute.js';
 import { UserContext } from "./UserProvider.js";
 
 export default function App() {
-  const { token, logout  } = useContext(UserContext);
-
   return (
     <div className="app">
-      {token && <Home logout={logout}/>}
       <Routes>
      
         <Route
           path="/"
-          element={
-            token ? <Navigate to="/plants" /> : <Auth />
-          }
+          element={<Home />}
         />
         <Route
           path="/plants"
-          element={<ProtectedRoute token={token}>
-            <Plant />
-            </ProtectedRoute>
-            }
+          element={<Plant />}
         />
         <Route
           path="/info"
-          element={<ProtectedRoute token={token}>
-          <Info />
-          </ProtectedRoute>}
+          element={<Info />}
         />
-        <Route
-          path="/home"
-          element={<ProtectedRoute token={token}>
-          <Home />
-          </ProtectedRoute>}
-        />
+        
       </Routes>
     </div>
   );
