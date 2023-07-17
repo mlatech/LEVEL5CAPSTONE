@@ -1,6 +1,5 @@
 import  React, { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { UserContext } from "../UserProvider";
 import "./Home.css";
 import Navbar from "./NavBar";
 

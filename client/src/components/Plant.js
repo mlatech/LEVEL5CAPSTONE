@@ -1,6 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { UserContext } from "../UserProvider";
 import "./Plant.css";
 import emailjs from '@emailjs/browser';
 import Navbar from "./NavBar";
