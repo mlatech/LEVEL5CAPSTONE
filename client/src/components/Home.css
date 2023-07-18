@@ -1,0 +1,117 @@
+.home-container {
+  font-family: Arial, sans-serif;
+}
+
+
+
+.portfolio-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.hero {
+  background-image: url("/Users/karynachernyak/vschool/development/LEVEL-5/LEVEL5CAPSTONE/client/src/images/homepagepic.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+
+
+.explore-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.announcements {
+  background-image: url("/Users/karynachernyak/vschool/development/LEVEL-5/LEVEL5CAPSTONE/client/src/images/jonathan-kemper-4z3lnwEvZQw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+
+.announcements-title {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 1rem;
+  color: whitesmoke;
+}
+
+.announcements-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.announcement {
+  margin-bottom: 0.5rem;
+}
+
+.announcement-text {
+  font-size: 18px;
+  margin: 0;
+  color: whitesmoke;
+}
+
+.about-us-section{
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family: Roboto, sans-serif;
+ 
+}
+.about-us-title {
+  color: #333333;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-top: 3px; /* Adjust the value as needed */
+}
+
+.about-us-content {
+  color: #333333;
+  font-size: 16px;
+}
+
+
+.footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
